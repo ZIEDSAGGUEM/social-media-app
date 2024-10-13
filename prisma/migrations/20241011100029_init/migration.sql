@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE `like` ADD COLUMN `storyId` INTEGER NULL;
+
+-- AddForeignKey
+ALTER TABLE `Like` ADD CONSTRAINT `Like_storyId_fkey` FOREIGN KEY (`storyId`) REFERENCES `Story`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
